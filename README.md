@@ -9,9 +9,10 @@
 ## 环境
 
 - Ubuntu 22.04 LTS
-- GCC
-- CMake
-- Git
+- CMake 3.22+
+- GCC 11+
+sudo apt update
+sudo apt install -y build-essential cmake git
 
 ## 目录结构
 ```test
@@ -23,21 +24,16 @@ hello_cmake/
 │ └── success.png
 └── src/
   └── main.cpp
+src/     保存源代码
+images/  保存 README 使用的截图
+build/   保存 CMake 生成的构建文件和程序
 ```
+
 ## 构建步骤
 
-进入项目根目录：
 ```bash
 cd hello_cmake
-```
-
-生成构建文件：
-```bash
 cmake -S . -B build
-```
-
-编译：
-```bash
 cmake --build build
 ```
 
@@ -52,6 +48,7 @@ cmake --build build
 ```test
 Hello, RoboMaster!
 ```
+![运行成功截图](images/success.png)
 
 ## 作者与日期
 ```test
